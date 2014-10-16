@@ -1,0 +1,12 @@
+extends layout
+
+block styles
+	| <style> html, body, #map-canvas { height: 90%; margin: 0px; padding: 0px      } </style>
+	|<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=visualization"></script>
+	
+block content
+	div#map-canvas
+	ul
+		each item in data
+			li.datumn #{item.time} #{item.lon} #{item.lat}
+
